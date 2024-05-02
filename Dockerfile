@@ -16,6 +16,10 @@ EXPOSE 9090
 
 ENV TZ=Europe/Amsterdam
 
+# Mend traceability labels
+LABEL io.mend.image.dockerfile.path=Dockerfile
+LABEL org.opencontainers.image.source=https://github.com/MendDemo-josh/WebGoat_ImageTracing
+
 WORKDIR /home/webgoat
 ENTRYPOINT [ "java", \
    "-Duser.home=/home/webgoat", \
